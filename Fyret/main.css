@@ -883,7 +883,6 @@ blockquote footer, blockquote small, blockquote .small {
   .slideshow li {
     width: 100%;
     height: 100%;
-    top: 30%;
     left: 0;
     margin: 0;
   }
@@ -926,16 +925,21 @@ blockquote footer, blockquote small, blockquote .small {
     display: block;
     margin: 0 1% 5%;
   }
-}
-
-@media screen and (max-width: 640px) {
   .hero h1 {
     font-size: 2.5em;
   }
   .shed li {
     font-size: 16px;
   }
+  .fade-carousel {
+    position: relative;
+    top: 1rem;
+  }
+  #header .hero .btn {
+    display: none;
+  }
 }
+
 
 @media screen and (max-width:560px) {
   .grid li {
