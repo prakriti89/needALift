@@ -545,8 +545,6 @@ img#site-title {
   width: 660px;
   height: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
   margin: -280px 0 0 -330px;
   visibility: hidden;
 }
@@ -933,6 +931,10 @@ blockquote footer, blockquote small, blockquote .small {
   }
   #header .hero .btn {
     display: none;
+  }
+  .slideshow nav span{
+    font-size: 500%;
+    padding: 0.3em;
   }
 }
 
