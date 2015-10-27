@@ -931,10 +931,6 @@ blockquote footer, blockquote small, blockquote .small {
   .shed li {
     font-size: 16px;
   }
-  .fade-carousel {
-    position: relative;
-    top: 1rem;
-  }
   #header .hero .btn {
     display: none;
   }
