@@ -786,15 +786,15 @@ blockquote {
   
 }
 
-.feedback {
+.openingTime {
   background: url('../img/img3.jpg');
 }
 
-.feedback .heading h2 {
+.openingTime .heading h2 {
   color: #fff;
 }
 
-.feedback .heading h3 {
+.openingTime .heading h3 {
   color: #fff;
   border-bottom: 1px solid rgba(243, 156, 18, 0.25);
 }
