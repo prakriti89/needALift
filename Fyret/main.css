@@ -846,25 +846,6 @@ blockquote footer, blockquote small, blockquote .small {
   }
 }
 
-@media (max-width: 768px) {
-          
-  #quote-carousel .carousel-indicators {
-    bottom: -20px !important;
-  }
-
-  #quote-carousel .carousel-indicators li {
-    display: inline-block;
-    margin: 0px 5px;
-    width: 15px;
-    height: 15px;
-  }
-
-  #quote-carousel .carousel-indicators li.active {
-    margin: 0px 5px;
-    width: 20px;
-    height: 20px;
-  }
-}
 
 @media (min-width: 991px) {
   .lu-section-title {
@@ -913,6 +894,23 @@ blockquote footer, blockquote small, blockquote .small {
 }
 
 @media screen and (max-width:768px) {
+  
+  #quote-carousel .carousel-indicators {
+    bottom: -20px !important;
+  }
+
+  #quote-carousel .carousel-indicators li {
+    display: inline-block;
+    margin: 0px 5px;
+    width: 15px;
+    height: 15px;
+  }
+
+  #quote-carousel .carousel-indicators li.active {
+    margin: 0px 5px;
+    width: 20px;
+    height: 20px;
+  }
   .menu {
     display: none;
   }
@@ -929,12 +927,34 @@ blockquote footer, blockquote small, blockquote .small {
   .shed li {
     font-size: 16px;
   }
+  .contact-detail a {
+    display: block;
+  }
   #header .hero .btn {
     display: none;
   }
   .slideshow nav span{
     font-size: 500%;
     padding: 0.3em;
+  }
+  .footer .container {
+    padding: 0;
+  }
+  .footer ul {
+    margin: 0 0 1rem;
+  }
+
+  .footer ul li {
+    display: inline-block;
+    text-align: center;
+    background: transparent;
+    color: #ffffff;
+    margin: 0 5%;
+    width: 0;
+    height: 0;
+  }
+  .footer ul li a {
+    font-size: 2rem;
   }
 }
 
