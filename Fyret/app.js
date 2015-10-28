@@ -10,7 +10,26 @@ app.use(express.static(__dirname + '/'))
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-	res.render('index', {});
+  var meny = [
+    { name: 'Hjem',
+      id: 'header'
+    },
+    { name: 'Om Fyret',
+      id: 'about'
+    },
+    { name: 'Galleri',
+      id: 'gallery'
+    },
+    { name: 'Åpeningstid',
+      id: 'openhours'
+    },
+    { name: 'Kontakt',
+      id: 'contact'
+    }
+  ]
+	res.render('index', {
+    meny: meny
+  });
 });
 var portNumber = process.env.PORT || 3000;
 httpServer.listen(portNumber, function () {
