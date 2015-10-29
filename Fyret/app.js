@@ -28,24 +28,31 @@ app.get('/', function (req, res) {
     }
   ];
   var pictures = [
-    'img/gallery/image1.JPG',
-    'img/gallery/image2.JPG',
-    'img/gallery/image3.JPG',
-    'img/gallery/middag-4.jpg',
-    'img/gallery/image4.JPG',
-    'img/gallery/image5.JPG',
-    'img/gallery/image6.JPG',
-    'img/gallery/image7.JPG',
-    'img/gallery/burger.jpg',
-    'img/gallery/image8.jpg',
-    'img/gallery/image9.JPG',
-    'img/gallery/image10.jpg',
-    'img/gallery/image11.JPG',
-    'img/gallery/image12.JPG'
+    'image1.JPG',
+    'image2.JPG',
+    'image3.JPG',
+    'middag-4.jpg',
+    'image4.JPG',
+    'image5.JPG',
+    'image6.JPG',
+    'image7.JPG',
+    'burger.jpg',
+    'image8.jpg',
+    'image10.jpg',
+    'image9.JPG',
+    'image11.JPG',
+    'image12.JPG'
   ];
+  var first_horizontal_pictures = pictures.slice(0,9);
+  var vertical_pictures = pictures.slice(9,11);
+  var second_horizontal_pictures = pictures.slice(11,14);
+  
 	res.render('index', {
     meny: meny,
-    pictures: pictures
+    pictures: pictures,
+    first_horizontal_pictures: first_horizontal_pictures,
+    vertical_pictures: vertical_pictures,
+    second_horizontal_pictures: second_horizontal_pictures
   });
 });
 var portNumber = process.env.PORT || 3000;

@@ -11,7 +11,7 @@
           <% pictures.forEach(function(picture) { %>
           <li>
             <figure>
-              <img src="<%= picture %>" alt=""/>
+              <img src="img/gallery/<%= picture %>" alt=""/>
             </figure>
           </li>
           <% }); %>
@@ -20,76 +20,27 @@
 
       <section class="slideshow">
         <ul>
-          <li>
-            <figure>
-              <img src="img/gallery/image1.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image2.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image3.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/middag-4.jpg" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image4.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image5.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image6.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image7.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/burger.jpg" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure class="vertical-image">
-              <img src="img/gallery/image8.jpg" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image9.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure class="vertical-image">
-              <img src="img/gallery/image10.jpg" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image11.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image12.JPG" alt=""/>
-            </figure>
-          </li>
+          <% first_horizontal_pictures.forEach(function(picture) { %>
+            <li>
+              <figure>
+                <img src="img/gallery/<%= picture %>" alt=""/>
+              </figure>
+            </li>
+          <% }); %>
+          <% vertical_pictures.forEach(function(picture) { %>
+            <li>
+              <figure class="vertical-image">
+                <img src="img/gallery/<%= picture %>" alt=""/>
+              </figure>
+            </li>
+          <% }); %>
+          <% second_horizontal_pictures.forEach(function(picture) { %>
+            <li>
+              <figure>
+                <img src="img/gallery/<%= picture %>" alt=""/>
+              </figure>
+            </li>
+          <% }); %>
         </ul>
         <nav>
           <span class="icon nav-prev"></span>
