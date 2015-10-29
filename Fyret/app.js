@@ -37,7 +37,7 @@ app.get('/', function (req, res) {
     'img/gallery/image6.JPG',
     'img/gallery/image7.JPG',
     'img/gallery/burger.jpg',
-    'img/gallery/image8-test.jpg',
+    'img/gallery/image8.jpg',
     'img/gallery/image9.JPG',
     'img/gallery/image10.jpg',
     'img/gallery/image11.JPG',
