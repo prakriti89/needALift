@@ -4,20 +4,18 @@
       <h2>Bilde Galleri</h2>			
     </div> 
     <div id="grid-gallery" class="grid-gallery">
-
       <section class="grid-wrap">
         <ul class="grid">
           <li class="grid-sizer"></li><!-- for Masonry column width -->				
           <% pictures.forEach(function(picture) { %>
-          <li>
-            <figure>
-              <img src="img/gallery/<%= picture %>" alt=""/>
-            </figure>
-          </li>
+            <li>
+              <figure>
+                <img src="img/gallery/<%= picture %>" alt=""/>
+              </figure>
+            </li>
           <% }); %>
         </ul>
-      </section><!-- // end small images -->
-
+      </section>
       <section class="slideshow">
         <ul>
           <% first_horizontal_pictures.forEach(function(picture) { %>
@@ -47,9 +45,7 @@
           <span class="icon nav-next"></span>
           <span class="icon nav-close"></span>
         </nav>
-
-      </section><!-- // end slideshow -->
-
-    </div><!-- // grid-gallery -->
+      </section>
+    </div>
   </div>
 </section>
