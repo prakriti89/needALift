@@ -26,9 +26,26 @@ app.get('/', function (req, res) {
     { name: 'Kontakt',
       id: 'contact'
     }
-  ]
+  ];
+  var pictures = [
+    'img/gallery/image1.JPG',
+    'img/gallery/image2.JPG',
+    'img/gallery/image3.JPG',
+    'img/gallery/middag-4.jpg',
+    'img/gallery/image4.JPG',
+    'img/gallery/image5.JPG',
+    'img/gallery/image6.JPG',
+    'img/gallery/image7.JPG',
+    'img/gallery/burger.jpg',
+    'img/gallery/image8-test.jpg',
+    'img/gallery/image9.JPG',
+    'img/gallery/image10.jpg',
+    'img/gallery/image11.JPG',
+    'img/gallery/image12.JPG'
+  ];
 	res.render('index', {
-    meny: meny
+    meny: meny,
+    pictures: pictures
   });
 });
 var portNumber = process.env.PORT || 3000;

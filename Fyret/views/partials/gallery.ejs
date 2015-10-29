@@ -8,76 +8,13 @@
       <section class="grid-wrap">
         <ul class="grid">
           <li class="grid-sizer"></li><!-- for Masonry column width -->				
+          <% pictures.forEach(function(picture) { %>
           <li>
             <figure>
-              <img src="img/gallery/image1.JPG" alt=""/>
+              <img src="<%= picture %>" alt=""/>
             </figure>
           </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image2.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image3.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/middag-4.jpg" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image4.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image5.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image6.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image7.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/burger.jpg" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image8.jpg" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image9.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image10.jpg" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image11.JPG" alt=""/>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="img/gallery/image12.JPG" alt=""/>
-            </figure>
-          </li>
+          <% }); %>
         </ul>
       </section><!-- // end small images -->
 
