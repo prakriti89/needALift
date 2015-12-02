@@ -1,0 +1,46 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Post Your Lift</h1>
+    <div class="buttons">
+      <button class="close-modal button button-icon button-clear ion-android-close" ng-click="closeModal()"></button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="submitPost()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">From Address</span>
+          <input type="text" ng-model="postForm.fromAddress">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">To Address</span>
+          <input type="text" ng-model="postForm.toAddress">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Date</span>
+          <input type="date" ng-model="postForm.date" >
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Time</span>
+          <input type="text" name="hrs" placeholder="10:15 AM" ng-model="postForm.time">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Short Message</span>
+          <textarea rows="6" cols="6" ng-model="postForm.message"></textarea>
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Role
+          </div>
+          <select ng-model="postForm.role">
+            <option value="need" selected>Need</option>
+            <option value="offer" >Offer</option>
+          </select>
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Submit</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>
