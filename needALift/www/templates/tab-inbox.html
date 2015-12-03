@@ -1,7 +1,19 @@
 <ion-view name="tab-inbox" view-title="Inbox">
   <ion-content class="padding">
-    <div class="list card" ng-repeat="post in posts" ng-if="post.acceptPost">
-      <div class="item item-divider">Your {{acceptedPost.role}} accepted!</div>
+    <div class="list card" ng-repeat="post in posts" ng-if="post.acceptPost && post.user.uid == loggedInUserData.$id">
+      <div class="item item-divider">Your {{post.role}} has been accepted!</div>
+      <div class="item item-body">
+        <div>
+          {{post.fromAddress}}
+          {{post.toAddress}}
+          {{post.date | date}}
+          {{post.time}}
+          {{post.message}}
+        </div>
+      </div>
+    </div>
+    <div class="list card" ng-repeat="post in posts" ng-if="post.acceptPost && post.acceptPostUserId == loggedInUserData.$id">
+      <div class="item item-divider">You accepted a {{post.role}}</div>
       <div class="item item-body">
         <div>
           {{post.fromAddress}}

@@ -60,6 +60,7 @@ angular.module('starter.controllers', [])
         uid: uid
       },
       acceptPost: acceptPost,
+      acceptPostUserId: '',
       created_at: created_at
     }); 
     
@@ -69,11 +70,15 @@ angular.module('starter.controllers', [])
   $scope.deletePost = function (post) {
     $scope.posts.$remove(post);
   }
+  
   $scope.acceptPost = function (post) {
     var postname = post.$id;
+    $scope.acceptPostUserId = $rootScope.authData.uid;
     var singlePost = new Firebase("https://fiery-inferno-166.firebaseio.com/posts/" + postname);
     post.acceptPost = true;
     singlePost.child('acceptPost').set(post.acceptPost);
+    singlePost.child('acceptPostUserId').set($scope.acceptPostUserId);
+    $scope.posts.push({acceptPostUserId: $rootScope.authData.uid});
     console.log("post accepted");
   }
 })
@@ -137,23 +142,6 @@ angular.module('starter.controllers', [])
       }
     });
   };
-/*  $scope.loginFacebook = function() {
-    Auth.$authWithOAuthRedirect("facebook").then(function(authData) {
-    }).catch(function(error) {
-      if (error.code === "TRANSPORT_UNAVAILABLE") {
-        Auth.$authWithOAuthPopup("facebook").then(function(authData) {
-          // User successfully logged in. We can log to the console
-          // since we’re using a popup here
-          console.log(authData);
-          $state.go('tab.dash');
-        });
-      } else {
-        // Another error occurred
-        console.log(error);
-      }
-    });
-
-  }*/
   Auth.$onAuth(function(authData) {
     if (authData === null) {
       console.log("Not logged in yet");
