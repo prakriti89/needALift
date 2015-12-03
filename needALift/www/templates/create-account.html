@@ -1,0 +1,23 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Create an Account</h1>
+    <div class="buttons">
+      <button class="close-modal button button-icon button-clear ion-android-close" ng-click="closeModal()"></button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="card list">
+      <label class="item item-input">
+        <span class="input-label">Email address</span>
+        <input type="text" ng-model="signupData.email">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">password</span>
+        <input type="password" ng-model="signupData.password">
+      </label>
+      <label class="item">
+        <button class="button button-block button-positive" ng-click="signupEmail()">Create</button>
+      </label>
+    </div>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,25 @@
+<ion-view view-title="Login">
+  <ion-content>
+    <div class="card list">
+      <label class="item item-input">
+        <span class="input-label">Email address</span>
+        <input type="text" ng-model="data.email">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">password</span>
+        <input type="password" ng-model="data.password">
+      </label>
+      <div class="item">
+        <button class="button button-block button-positive" ng-click="loginEmail()">Login</button>
+        <div ng-hide="authData" ng-click="loginFacebook()">
+          <button class="button button-block button-calm" class="item">
+            Log In with Facebook
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="create-account">
+      <button class="button button-block button-danger" ng-click="createAccount()">Create New Account</button>
+    </div>
+  </ion-content>
+</ion-view>

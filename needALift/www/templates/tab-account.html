@@ -1,36 +1,8 @@
 <ion-view view-title="Account">
   <ion-content>
-    <div class="list">
-      <label class="item item-input">
-        <span class="input-label">Email address</span>
-        <input type="text" ng-model="data.email">
-      </label>
-      <label class="item item-input">
-        <span class="input-label">password</span>
-        <input type="password" ng-model="data.password">
-      </label>
-      <label class="item">
-        <button class="button button-block button-positive" ng-click="loginEmail()">Login</button>
-      </label>
-      <label class="item">
-        <button class="button button-block button-danger" ng-click="signupEmail()">Sign Up</button>
-      </label>
-      <label class="item">
-        <button class="button button-block button-danger" ng-click="logOut()">Logout</button>
-      </label>
-    </div>
-    
-    <div ng-hide="authData" class="card" ng-click="loginFacebook()">
-      <button class="item">
-        Log In with Facebook
-      </button>
-    </div>
     <div class="card" ng-show="authData">
       <div class="item item-text-wrap">
-        Hello {{authData.facebook.displayName}}!
-      </div>
-      <div class="item item-text-wrap">
-        Hello {{authData.password.email}}!
+        Hello {{authData.facebook.displayName || authData.password.email}}!
       </div>
     </div>
   </ion-content>
